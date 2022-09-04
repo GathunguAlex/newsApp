@@ -19,22 +19,22 @@
     return news
  }
  function addNews(title){
-    var query=document.getElementById("query").value // get user input
+    let query=document.getElementById("query").value // get user input
     getNews(query).then(news=>{
     // get relevant elements by set id.
 
-    var head=document.getElementById("title")
+    let head=document.getElementById("title")
 
-    var summ=document.getElementById("summary")
+    let summ=document.getElementById("summary")
 
-    var newsImg=document.getElementById("newspic")
+    let newsImg=document.getElementById("newspic")
 
     // ------get news title,  from news api returned promise
-    var title=news[Object.keys(news)[5]][0].title 
+    let title=news[Object.keys(news)[5]][0].title 
     // get news summary ,  from news api returned promise
-    var summary=news[Object.keys(news)[5]][0].summary 
+    let summary=news[Object.keys(news)[5]][0].summary 
      // ..........news image
-    var imgPath=news[Object.keys(news)[5]][0].media
+    let imgPath=news[Object.keys(news)[5]][0].media
     // set relevant fields in html tag
      head.innerHTML= title.toString() //set title text in html tag
 
